@@ -1,0 +1,374 @@
+{
+  "brand": "PrivacyBulkWebP",
+  "nav": {
+    "tool": "Converter",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "login": "Log In",
+    "dashboard": "Dashboard",
+    "adminPanel": "Admin Panel",
+    "upgradePro": "Upgrade Pro",
+    "about": "About",
+    "logout": "Log Out"
+  },
+  "hero": {
+    "title": "Bulk WebP Converter",
+    "subtitle": "100% Local Browser Processing — Your images never leave your device",
+    "cta": "Start Converting Free"
+  },
+  "privacy": {
+    "badge": "100% Local Processing, No Server Uploads",
+    "description": "All image conversion runs entirely in your browser. No uploads, no server storage, no privacy risks."
+  },
+  "tool": {
+    "dropzone": {
+      "title": "Drag & drop images here",
+      "subtitle": "or click to browse files",
+      "formats": "Supports PNG, JPG, JPEG, GIF, WebP",
+      "addMore": "Add"
+    },
+    "settings": {
+      "title": "Compression Settings",
+      "quality": "Quality",
+      "mode": "Compression Mode",
+      "standard": "Standard",
+      "lossy": "Lossy (Smaller)",
+      "lossless": "Lossless (Higher Quality)",
+      "custom": "Custom Quality"
+    },
+    "actions": {
+      "convert": "Convert to WebP",
+      "converting": "Converting...",
+      "clearAll": "Clear All",
+      "downloadAll": "Download All (ZIP)",
+      "addMore": "Add More Images"
+    },
+    "status": {
+      "ready": "Ready to convert",
+      "processing": "Processing {{current}} of {{total}}...",
+      "complete": "{{count}} images converted successfully",
+      "error": "Conversion failed"
+    },
+    "grid": {
+      "original": "Original",
+      "converted": "Converted",
+      "download": "Download",
+      "remove": "Remove",
+      "saved": "Saved {{percent}}%",
+      "sizeIncreased": "Size increased"
+    },
+    "limits": {
+      "freeMax": "Free tier: up to {{max}} images. Upgrade for more.",
+      "tierMax": "Current tier: up to {{max}} images per batch.",
+      "unlimited": "Unlimited batch size",
+      "upgradeZip": "Upgrade to unlock ZIP batch download",
+      "lockedFeature": "This feature requires {{tier}} plan"
+    },
+    "imageCount": "{{count}} / {{max}} images"
+  },
+  "features": {
+    "title": "Why Choose PrivacyBulkWebP?",
+    "privacy": {
+      "title": "100% Local Privacy",
+      "description": "All processing happens in your browser. No uploads, no cloud storage, zero data collection."
+    },
+    "batch": {
+      "title": "Batch Processing",
+      "description": "Convert 50+ images at once. Save hours on large image sets for your website."
+    },
+    "quality": {
+      "title": "Flexible Quality Control",
+      "description": "Fine-tune lossy, lossless, and custom quality settings for the perfect balance."
+    },
+    "zip": {
+      "title": "ZIP Batch Download",
+      "description": "Download all converted images as a single ZIP file."
+    },
+    "rename": {
+      "title": "Batch Rename",
+      "description": "Rename and organize converted files in bulk with custom naming patterns."
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "No hidden fees. Cancel anytime.",
+    "free": {
+      "name": "Free",
+      "description": "For quick, occasional conversions",
+      "price": "$0",
+      "period": "forever",
+      "features": [
+        "Up to 5 images per batch",
+        "Standard compression",
+        "Single image download",
+        "No registration required"
+      ],
+      "cta": "Get Started Free"
+    },
+    "personal": {
+      "name": "Personal",
+      "description": "For bloggers and small site owners",
+      "price": "$5.99",
+      "period": "/month",
+      "features": [
+        "Up to 50 images per batch",
+        "Lossy & lossless compression",
+        "ZIP batch download",
+        "Custom quality settings",
+        "Ad-free experience",
+        "Secure PayPal billing"
+      ],
+      "cta": "Subscribe — $5.99/mo"
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "For agencies and power users",
+      "price": "$9.99",
+      "period": "/month",
+      "features": [
+        "Unlimited images per batch",
+        "All compression modes",
+        "Batch rename",
+        "Priority support",
+        "Everything in Personal"
+      ],
+      "cta": "Subscribe — $9.99/mo"
+    },
+    "currentPlan": "Current Plan",
+    "upgrade": "Upgrade",
+    "popular": "Most Popular",
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "saveBadge": "Save 20%",
+      "yearlyNote": "Billed annually"
+    },
+    "freeExtra": {
+      "ads": "Contains ads",
+      "allFree": "All free features included"
+    },
+    "compare": {
+      "title": "Compare All Features",
+      "feature": "Feature",
+      "batchLimit": "Batch limit",
+      "compressionModes": "Compression modes",
+      "zipDownload": "ZIP download",
+      "customQuality": "Custom quality",
+      "adFree": "Ad-free experience",
+      "batchRename": "Batch rename",
+      "prioritySupport": "Priority support",
+      "standardOnly": "Standard only",
+      "lossyLossless": "Lossy & Lossless",
+      "allModes": "All modes",
+      "yes": "Yes",
+      "no": "No",
+      "images": "{{count}} images",
+      "unlimited": "Unlimited"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Can I switch plans later?",
+          "a": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle."
+        },
+        {
+          "q": "How do I cancel my subscription?",
+          "a": "You can cancel anytime from your account settings. Your plan will remain active until the end of the current billing period."
+        },
+        {
+          "q": "What payment methods do you accept?",
+          "a": "We accept PayPal for all subscription payments. Your payment information is securely handled by PayPal."
+        },
+        {
+          "q": "Is there a refund policy?",
+          "a": "Yes, we offer a 7-day money-back guarantee. If you're not satisfied, contact us within 7 days of your purchase for a full refund."
+        },
+        {
+          "q": "Do I need to create an account?",
+          "a": "The Free plan doesn't require an account. Personal and Pro plans require one to manage your subscription and access features."
+        }
+      ]
+    },
+    "loginPrompt": "Please log in to subscribe",
+    "yearlyPrice": "/mo",
+    "perMonthBilled": "/mo, billed yearly"
+  },
+  "cta": {
+    "title": "Ready to Convert Your Images?",
+    "subtitle": "Start converting in seconds — no sign-up required.",
+    "button": "Start Free Now"
+  },
+  "footer": {
+    "description": "Privacy-first bulk WebP image converter. 100% local browser processing.",
+    "product": "Product",
+    "legal": "Legal",
+    "about": "About",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "refundPolicy": "Refund Policy",
+    "copyright": "© 2026 PrivacyBulkWebP. All rights reserved."
+  },
+  "seo": {
+    "title": "PrivacyBulkWebP — Free Bulk WebP Converter | Local Browser, No Uploads",
+    "description": "Convert PNG, JPG, GIF to WebP in bulk — 100% local in your browser. No server uploads, no registration. Free batch conversion up to 5 images."
+  },
+  "upgradeModal": {
+    "title": "Upgrade to {{tier}}",
+    "close": "Close",
+    "payWith": "Pay with PayPal"
+  },
+  "auth": {
+    "login": "Log In",
+    "register": "Sign Up",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "loginButton": "Log In",
+    "registerButton": "Create Account",
+    "switchToRegister": "Don't have an account? Sign up",
+    "switchToLogin": "Already have an account? Log in",
+    "loginSubtitle": "Welcome back! Please log in to your account.",
+    "registerSubtitle": "Create a free account to get started.",
+    "emailPlaceholder": "you@example.com",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "passwordHint": "At least 8 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "genericError": "Something went wrong. Please try again.",
+    "loggingIn": "Logging in...",
+    "registering": "Creating account..."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "subscription": "Subscription",
+    "currentPlan": "Current Plan",
+    "status": "Status",
+    "nextBilling": "Next billing date",
+    "subStart": "Start date",
+    "subEnd": "End date",
+    "manageSubscription": "Manage on PayPal",
+    "changePlan": "Change Plan",
+    "upgradePlan": "Upgrade Plan",
+    "usageStats": "Usage Statistics",
+    "totalConversions": "Total Conversions",
+    "spaceSaved": "Space Saved",
+    "avgCompression": "Avg. Compression",
+    "history": "Conversion History",
+    "historyEmpty": "No conversion history yet.",
+    "startConverting": "Start Converting",
+    "accountSettings": "Account Settings",
+    "freePlan": "Free Plan",
+    "freeDescription": "Basic conversion with limited features. Upgrade for more.",
+    "readOnly": "Read-only",
+    "email": "Email",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordPlaceholder": "At least 8 characters",
+    "currentPasswordRequired": "Please enter your current password",
+    "newPasswordRequired": "Please enter a new password",
+    "passwordMinLength": "New password must be at least 8 characters",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "passwordSameAsCurrent": "New password must be different from current password",
+    "changePasswordFailed": "Failed to change password",
+    "passwordChangedSuccess": "Password changed successfully",
+    "changingPassword": "Changing...",
+    "confirmChange": "Confirm Change",
+    "logout": "Log Out",
+    "active": "Active",
+    "cancelled": "Cancelled",
+    "expired": "Expired",
+    "free": "Free",
+    "fileName": "File Name",
+    "originalSize": "Original",
+    "convertedSize": "Converted",
+    "savings": "Savings",
+    "mode": "Mode",
+    "date": "Date"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage registered users",
+    "users": "users",
+    "totalUsers": "Total Users",
+    "freeUsers": "Free",
+    "personalUsers": "Personal",
+    "proUsers": "Pro",
+    "email": "Email",
+    "tier": "Tier",
+    "registered": "Registered",
+    "subStart": "Sub Start",
+    "subEnd": "Sub End",
+    "noUsers": "No registered users yet"
+  },
+  "upgrade": {
+    "title": "This feature requires a paid plan",
+    "description": "Upgrade to unlock advanced features and remove limitations.",
+    "featureBatchLimit": "Batch upload limit reached (5 images max on Free plan)",
+    "featureZip": "ZIP batch download is a Personal plan feature",
+    "featureLossy": "Lossy compression is a Personal plan feature",
+    "featureLossless": "Lossless compression is a Personal plan feature",
+    "featureCustom": "Custom quality is a Personal plan feature",
+    "featureRename": "Batch rename is a Pro plan feature",
+    "featurePremium": "This feature requires a paid plan",
+    "cta": "Upgrade to Personal — $5.99/mo",
+    "viewAllPlans": "View all plans",
+    "includedFeatures": "What you'll get:"
+  },
+  "about": {
+    "title": "About PrivacyBulkWebP",
+    "tagline": "The most privacy-focused bulk WebP image converter — 100% local processing, zero data collection.",
+    "mission": {
+      "title": "Our Mission",
+      "p1": "We believe everyone deserves a privacy-first image conversion tool. Your images are your own, and they should never be uploaded to a third-party server without your consent.",
+      "p2": "That's why PrivacyBulkWebP performs 100% of its processing locally in your browser. Your images never leave your device — not even for a second.",
+      "p3": "No server uploads. No data collection. No privacy compromises. Just fast, reliable image conversion that respects your rights."
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1Title": "Add Your Images",
+      "step1Desc": "Drag and drop your images or use the file picker to select them.",
+      "step2Title": "Choose Compression Settings",
+      "step2Desc": "Select your preferred quality level and compression mode — standard, lossy, lossless, or custom.",
+      "step3Title": "Convert Locally in Your Browser",
+      "step3Desc": "Images are converted using the Canvas API directly in your browser. Nothing is uploaded.",
+      "step4Title": "Download Your WebP Files",
+      "step4Desc": "Download individual files or grab them all in a single ZIP file.",
+      "localNote": "All processing happens entirely on your device."
+    },
+    "why": {
+      "title": "Why Choose Us",
+      "privacyTitle": "Privacy First",
+      "privacyDesc": "Zero server uploads. All image processing happens locally in your browser.",
+      "fastTitle": "Fast & Efficient",
+      "fastDesc": "Built on the modern Canvas API with optimized batch processing for speed.",
+      "flexibleTitle": "Flexible Plans",
+      "flexibleDesc": "Free tier for everyone, with affordable premium plans for power users.",
+      "noRegTitle": "No Registration Required",
+      "noRegDesc": "Start converting images immediately — no sign-up, no account needed.",
+      "crossTitle": "Cross-Platform",
+      "crossDesc": "Works on any modern browser — Chrome, Firefox, Safari, Edge, and more."
+    },
+    "tech": {
+      "title": "Technology",
+      "item1": "Built with modern web technologies for reliability and speed.",
+      "item2": "Canvas API for real, high-quality image conversion.",
+      "item3": "WebP encoding natively in the browser — no plugins required.",
+      "item4": "JSZip for convenient batch downloads in a single ZIP file.",
+      "item5": "No third-party image processing services — everything stays local."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "desc": "For support, partnerships, or any inquiries — we'd love to hear from you."
+    }
+  }
+}
