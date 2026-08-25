@@ -49,7 +49,7 @@ export default function AdBanner({ slot, format = 'auto', className = '', showAd
 
   if (!showAds) return null;
 
-  const publisherId = window.ADSENSE_PUBLISHER_ID || 'ca-pub-XXXXXXXXXXXXXXXX';
+  const publisherId = window.ADSENSE_PUBLISHER_ID || 'ca-pub-7808849428453967';
   const minHeight = MIN_HEIGHTS[format] || MIN_HEIGHTS.auto;
 
   return (
