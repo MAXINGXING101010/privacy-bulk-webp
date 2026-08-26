@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Lock, Check, ArrowRight, X, Sparkles } from 'lucide-react';
+import { TIER_CONFIG } from '../utils/tierConfig';
 
 // Map feature keys to their upgrade translation keys and target tier
 const FEATURE_INFO = {
@@ -28,6 +29,7 @@ export default function UpgradeModal({
   onUpgrade,
   feature,
   onViewPlans,
+  userEmail,
 }) {
   const { t } = useTranslation();
 
@@ -57,7 +59,16 @@ export default function UpgradeModal({
   const isProFeature = info.tier === 'pro';
 
   const handlePrimaryCta = () => {
-    onUpgrade?.(isProFeature ? 'pro' : 'personal');
+    const targetTier = isProFeature ? 'pro' : 'personal';
+    const tier = TIER_CONFIG[targetTier];
+    if (tier?.checkoutUrl) {
+      const url = userEmail
+        ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+        : tier.checkoutUrl;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      onUpgrade?.(targetTier);
+    }
     onClose();
   };
 

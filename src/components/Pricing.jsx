@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, X, Star, ArrowUpCircle } from 'lucide-react';
+import { TIER_CONFIG } from '../utils/tierConfig';
 
-export default function PricingModal({ open, onClose, currentTier, onUpgrade }) {
+export default function PricingModal({ open, onClose, currentTier, onUpgrade, userEmail }) {
   const { t } = useTranslation();
 
   // Lock body scroll when open
@@ -121,22 +122,32 @@ export default function PricingModal({ open, onClose, currentTier, onUpgrade }) 
                     <button className="btn-secondary w-full" disabled>
                       {t('pricing.currentPlan')}
                     </button>
+                  ) : plan.key === 'free' ? (
+                    <button
+                      className="btn-secondary w-full"
+                      onClick={() => {
+                        onUpgrade?.(plan.key);
+                        onClose();
+                      }}
+                    >
+                      {t('pricing.free.cta')}
+                    </button>
                   ) : (
                     <button
                       className={plan.highlight ? 'btn-primary w-full' : 'btn-secondary w-full'}
                       onClick={() => {
-                        onUpgrade(plan.key);
+                        const tier = TIER_CONFIG[plan.key];
+                        if (tier?.checkoutUrl) {
+                          const url = userEmail
+                            ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+                            : tier.checkoutUrl;
+                          window.open(url, '_blank', 'noopener,noreferrer');
+                        }
                         onClose();
                       }}
                     >
-                      {plan.key === 'free' ? (
-                        t('pricing.free.cta')
-                      ) : (
-                        <>
-                          <ArrowUpCircle className="w-4 h-4 mr-2" />
-                          {t(`${tk}.cta`)}
-                        </>
-                      )}
+                      <ArrowUpCircle className="w-4 h-4 mr-2" />
+                      {t(`${tk}.cta`)}
                     </button>
                   )}
                 </div>

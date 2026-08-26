@@ -388,6 +388,7 @@ function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth,
         onClose={closePricing}
         currentTier={tierKey}
         onUpgrade={handleUpgrade}
+        userEmail={auth.user?.email}
       />
 
       {/* ===== AUTH MODAL ===== */}
@@ -417,6 +418,7 @@ function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth,
           navigate('/pricing');
         }}
         feature={upgradeFeature}
+        userEmail={auth.user?.email}
       />
     </div>
   );
@@ -467,6 +469,7 @@ export default function App() {
             }}
             isAuthenticated={auth.isAuthenticated}
             currentTier={tierKey}
+            userEmail={auth.user?.email}
           />
         }
       />

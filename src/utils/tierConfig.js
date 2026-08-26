@@ -20,6 +20,7 @@ export const TIER_CONFIG = {
     price: 5.99,
     priceLabel: '$5.99',
     period: '/mo',
+    checkoutUrl: 'https://pbwebp.lemonsqueezy.com/checkout/buy/f0113c8c-1abe-4a2b-86ef-7c0645dad443',
   },
   pro: {
     name: 'Pro',
@@ -31,6 +32,7 @@ export const TIER_CONFIG = {
     price: 9.99,
     priceLabel: '$9.99',
     period: '/mo',
+    checkoutUrl: 'https://pbwebp.lemonsqueezy.com/checkout/buy/68c7ee3d-4b08-46a9-ab08-a01543a1146b',
   },
 };
 

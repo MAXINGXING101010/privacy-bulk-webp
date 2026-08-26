@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   status VARCHAR(20) NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'cancelled', 'expired')),
   paypal_subscription_id VARCHAR(255),
   paypal_payer_id VARCHAR(255),
+  lemon_squeezy_subscription_id VARCHAR(255),
   current_period_start TIMESTAMPTZ,
   current_period_end TIMESTAMPTZ,
   created_at TIMESTAMPTZ DEFAULT NOW(),
@@ -26,6 +27,7 @@ CREATE TABLE IF NOT EXISTS subscriptions (
 
 CREATE INDEX IF NOT EXISTS idx_subscriptions_user_id ON subscriptions(user_id);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_paypal_id ON subscriptions(paypal_subscription_id);
+CREATE INDEX IF NOT EXISTS idx_subscriptions_ls_id ON subscriptions(lemon_squeezy_subscription_id);
 
 -- Conversion history table
 CREATE TABLE IF NOT EXISTS conversion_history (

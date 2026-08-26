@@ -9,8 +9,9 @@ import {
   Star,
   ChevronDown,
 } from 'lucide-react';
+import { TIER_CONFIG } from '../utils/tierConfig';
 
-/* ──────────────────── PRICING DATA ──────────────────── */
+/* ─────────────────── PRICING DATA ──────────────────── */
 
 const PRICES = { personal: 5.99, pro: 9.99 };
 
@@ -27,7 +28,7 @@ const COMPARISON_FEATURES = [
 
 /* ──────────────────── COMPONENT ──────────────────── */
 
-export default function PricingPage({ onOpenPricing, isAuthenticated, currentTier }) {
+export default function PricingPage({ onOpenPricing, isAuthenticated, currentTier, userEmail }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -51,11 +52,16 @@ export default function PricingPage({ onOpenPricing, isAuthenticated, currentTie
 
   const handleSubscribe = (tierKey) => {
     if (!isAuthenticated) {
-      // Show a lightweight inline prompt — could be replaced with a toast/modal
       alert(t('pricing.loginPrompt'));
       return;
     }
-    if (onOpenPricing) {
+    const tier = TIER_CONFIG[tierKey];
+    if (tier?.checkoutUrl) {
+      const url = userEmail
+        ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+        : tier.checkoutUrl;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else if (onOpenPricing) {
       onOpenPricing(tierKey);
     }
   };
