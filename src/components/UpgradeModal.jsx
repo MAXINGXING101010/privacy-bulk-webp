@@ -63,7 +63,7 @@ export default function UpgradeModal({
     const tier = TIER_CONFIG[targetTier];
     if (tier?.checkoutUrl) {
       const url = userEmail
-        ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+        ? `${tier.checkoutUrl}&checkout[email]=${encodeURIComponent(userEmail)}`
         : tier.checkoutUrl;
       window.open(url, '_blank', 'noopener,noreferrer');
     } else {

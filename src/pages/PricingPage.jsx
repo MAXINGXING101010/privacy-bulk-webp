@@ -58,7 +58,7 @@ export default function PricingPage({ onOpenPricing, isAuthenticated, currentTie
     const tier = TIER_CONFIG[tierKey];
     if (tier?.checkoutUrl) {
       const url = userEmail
-        ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+        ? `${tier.checkoutUrl}&checkout[email]=${encodeURIComponent(userEmail)}`
         : tier.checkoutUrl;
       window.open(url, '_blank', 'noopener,noreferrer');
     } else if (onOpenPricing) {

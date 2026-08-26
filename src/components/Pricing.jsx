@@ -139,7 +139,7 @@ export default function PricingModal({ open, onClose, currentTier, onUpgrade, us
                         const tier = TIER_CONFIG[plan.key];
                         if (tier?.checkoutUrl) {
                           const url = userEmail
-                            ? `${tier.checkoutUrl}?checkout[email]=${encodeURIComponent(userEmail)}`
+                            ? `${tier.checkoutUrl}&checkout[email]=${encodeURIComponent(userEmail)}`
                             : tier.checkoutUrl;
                           window.open(url, '_blank', 'noopener,noreferrer');
                         }
