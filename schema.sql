@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+CREATE UNIQUE INDEX IF NOT EXISTS idx_subscriptions_user_id_unique ON subscriptions(user_id);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_user_id ON subscriptions(user_id);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_paypal_id ON subscriptions(paypal_subscription_id);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_ls_id ON subscriptions(lemon_squeezy_subscription_id);
