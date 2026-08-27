@@ -1,6 +1,6 @@
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import {
   Shield,
   Zap,
@@ -31,6 +31,7 @@ import { useAuth } from './hooks/useAuth';
 import { useConverter } from './hooks/useConverter';
 import { downloadZip } from './utils/imageConverter';
 import { TIER_CONFIG } from './utils/tierConfig';
+import { trackPageView, track } from './utils/analytics';
 
 /* ──────────────────── HOME PAGE ──────────────────── */
 function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth, showAds }) {
@@ -45,6 +46,7 @@ function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth,
   const navigate = useNavigate();
 
   const handleLockedClick = useCallback((feature) => {
+    track.feature_locked(feature);
     setUpgradeFeature(feature || 'premium');
     if (!auth.isAuthenticated) {
       setShowAuthModal(true);
@@ -58,6 +60,7 @@ function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth,
       handleLockedClick('zip');
       return;
     }
+    track.download('zip');
     downloadZip(converter.results);
   };
 
@@ -428,6 +431,12 @@ function HomePage({ openPricing, showPricing, closePricing, handleUpgrade, auth,
 export default function App() {
   const [showPricing, setShowPricing] = useState(false);
   const auth = useAuth();
+  const location = useLocation();
+
+  // Track page views on route change
+  useEffect(() => {
+    trackPageView(location.pathname + location.hash);
+  }, [location]);
 
   const openPricing = useCallback(() => setShowPricing(true), []);
   const closePricing = useCallback(() => setShowPricing(false), []);
